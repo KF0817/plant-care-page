@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Weather Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Weather-aware plant care</p>
+          <h1 id="page-title">Plant Weather Care</h1>
+          <p class="intro">
+            Choose your plant, check today&apos;s weather, and get a practical
+            watering rhythm that adjusts for heat, rain, and humidity.
+          </p>
+          <div class="hero__actions">
+            <button class="primary-button" id="locationButton" type="button">
+              Use my weather
+            </button>
+            <span class="status-pill" id="weatherStatus">Using demo weather</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Plant care dashboard">
+        <aside class="plant-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Plant library</p>
+            <h2>Pick a plant</h2>
+          </div>
+          <div class="plant-list" id="plantList"></div>
+        </aside>
+
+        <section class="care-panel">
+          <div class="care-panel__top">
+            <div>
+              <p class="eyebrow">Current care plan</p>
+              <h2 id="plantName">Monstera Deliciosa</h2>
+            </div>
+            <span class="difficulty" id="plantDifficulty">Easy</span>
+          </div>
+
+          <div class="care-grid">
+            <article class="metric-card">
+              <span>Water every</span>
+              <strong id="waterFrequency">7 days</strong>
+              <small id="weatherAdjustment">Normal indoor conditions</small>
+            </article>
+            <article class="metric-card">
+              <span>Light</span>
+              <strong id="plantLight">Bright indirect</strong>
+              <small>Keep leaves out of harsh direct sun.</small>
+            </article>
+            <article class="metric-card">
+              <span>Humidity</span>
+              <strong id="plantHumidity">Medium-high</strong>
+              <small id="humidityTip">Mist or group plants if air is dry.</small>
+            </article>
+          </div>
+
+          <div class="split-layout">
+            <article class="weather-card">
+              <div class="section-heading">
+                <p class="eyebrow">Today outside</p>
+                <h3 id="weatherTitle">Toronto-style spring</h3>
+              </div>
+              <div class="weather-main">
+                <strong id="weatherTemp">22°C</strong>
+                <span id="weatherCondition">Partly cloudy</span>
+              </div>
+              <dl class="weather-details">
+                <div>
+                  <dt>Humidity</dt>
+                  <dd id="weatherHumidity">58%</dd>
+                </div>
+                <div>
+                  <dt>Rain</dt>
+                  <dd id="weatherRain">0 mm</dd>
+                </div>
+                <div>
+                  <dt>Wind</dt>
+                  <dd id="weatherWind">11 km/h</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="schedule-card">
+              <div class="section-heading">
+                <p class="eyebrow">Next steps</p>
+                <h3>Watering schedule</h3>
+              </div>
+              <ol class="schedule-list" id="scheduleList"></ol>
+            </article>
+          </div>
+
+          <article class="notes-card">
+            <div class="section-heading">
+              <p class="eyebrow">Care notes</p>
+              <h3>What this plant likes</h3>
+            </div>
+            <p id="plantNotes">
+              Let the top few centimeters of soil dry before watering. Rotate
+              weekly so the plant grows evenly.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
